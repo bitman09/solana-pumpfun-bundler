@@ -65,14 +65,14 @@ export async function buyBundle() {
 
 	// -------- step 2: build pool init + dev snipe --------
 	const files = await fs.promises.readdir("./img");
-	if (files.length == 0) {
-		console.log("No image found in the img folder");
-		return;
-	}
-	if (files.length > 1) {
-		console.log("Multiple images found in the img folder, please only keep one image");
-		return;
-	}
+	// if (files.length == 0) {
+	// 	console.log("No image found in the img folder");
+	// 	return;
+	// }
+	// if (files.length > 1) {
+	// 	console.log("Multiple images found in the img folder, please only keep one image");
+	// 	return;
+	// }
 	const data: Buffer = fs.readFileSync(`./img/${files[0]}`);
 
 	let formData = new FormData();
@@ -139,10 +139,10 @@ export async function buyBundle() {
 	const ataIx = spl.createAssociatedTokenAccountIdempotentInstruction(wallet.publicKey, ata, wallet.publicKey, mintKp.publicKey);
 
 	// Extract tokenAmount from keyInfo for this keypair
-	const keypairInfo = keyInfo[wallet.publicKey.toString()];
-	if (!keypairInfo) {
-		console.log(`No key info found for keypair: ${wallet.publicKey.toString()}`);
-	}
+	// const keypairInfo = keyInfo[wallet.publicKey.toString()];
+	// if (!keypairInfo) {
+	// 	console.log(`No key info found for keypair: ${wallet.publicKey.toString()}`);
+	// }
 
 	// Calculate SOL amount based on tokenAmount
 	const amount = new BN(keypairInfo.tokenAmount);
