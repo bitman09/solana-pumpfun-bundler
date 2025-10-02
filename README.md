@@ -97,6 +97,6 @@ main().catch((err) => {
 
 
 ## Contact Info
-Telegram: [@Ljubomir Igic](https://t.me/ljubomir_igic)
+Telegram: [@Dias](https://t.me/bitman09)
 
-LinkedIn: [@Ljubomir Igic](https://www.linkedin.com/in/ljubomir-igic-6a9615340)
+LinkedIn: [@Dias Ishbulatov](https://www.linkedin.com/in/dias-ishbulatov/)
